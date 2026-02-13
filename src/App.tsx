@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { cvs, type Lang } from "./data/cv.i18n";
 import { LABELS } from "./i18n/labels";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import PhotoModal from "./components/PhotoModal";
 
 
 
@@ -26,6 +27,8 @@ export default function App() {
   const saved = localStorage.getItem("cv_lang");
   return saved === "en" || saved === "es" ? saved : "es";
 });
+  const [photoOpen, setPhotoOpen] = useState(false);
+
 
 useEffect(() => {
   localStorage.setItem("cv_lang", lang);
@@ -78,6 +81,12 @@ const t = LABELS[lang];
         <div className="mt-4 flex flex-wrap gap-2">
           <Badge>{cv.email}</Badge>
           <Badge>{cv.phone}</Badge>
+          <button
+            onClick={() => setPhotoOpen(true)}
+            className="rounded-full border border-zinc-800 px-3 py-1 text-sm text-zinc-200 hover:bg-zinc-900 transition"
+          >
+            Ver foto
+          </button>
         </div>
       </header>
 
@@ -131,26 +140,7 @@ const t = LABELS[lang];
             ))}
           </div>
         </Section>
-
-        {/* <Section id="proyectos" title="Proyectos Relevantes">
-          <div className="grid gap-4 sm:grid-cols-2">
-            {cv.projects.map((p) => (
-              <Card key={p.name + p.client}>
-                <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="text-lg font-semibold">{p.name}</h3>
-                  <p className="text-sm text-zinc-400">{p.year}</p>
-                </div>
-                <p className="text-zinc-300">{p.client}</p>
-                <ul className="mt-3 list-disc pl-5 space-y-1 text-zinc-200">
-                  {p.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-        </Section> */}
-        {/* <ProjectsSection /> */}
+        
         <ProjectsSection cv={cv} lang={lang} />
 
         <SkillsSection cv={cv} lang={lang} />
@@ -203,6 +193,11 @@ const t = LABELS[lang];
           </div>
         </footer>
       </div>
+      <PhotoModal
+        open={photoOpen}
+        onClose={() => setPhotoOpen(false)}
+        src="/foto-perfil.jpg"
+      />
     </Container>
   );
 }
