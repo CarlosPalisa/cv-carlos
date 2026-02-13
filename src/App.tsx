@@ -1,8 +1,13 @@
-import { cv } from "./data/cv";
+// import { cv } from "./data/cv";
 import { Container } from "./components/Container";
 import { Section } from "./components/Section";
 import { Badge } from "./components/Badge";
 import SkillsSection from "./components/Skills";
+import ProjectsSection from "./components/Projects";
+import { useEffect, useState } from "react";
+import { cvs, type Lang } from "./data/cv.i18n";
+import { LABELS } from "./i18n/labels";
+
 
 
 function Card({ children }: { children: React.ReactNode }) {
@@ -14,23 +19,47 @@ function Card({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+
+  const [lang, setLang] = useState<Lang>(() => {
+  const saved = localStorage.getItem("cv_lang");
+  return saved === "en" || saved === "es" ? saved : "es";
+});
+
+useEffect(() => {
+  localStorage.setItem("cv_lang", lang);
+}, [lang]);
+
+const cv = cvs[lang];
+const t = LABELS[lang];
+
+
   return (
     <Container>
       {/* TOP BAR */}
+      <div className="fixed right-4 top-4 z-50">
+        <button
+          className="rounded-full border border-zinc-800 bg-zinc-950/70 px-3 py-1 text-sm text-zinc-200 hover:bg-zinc-900"
+          onClick={() => setLang((p) => (p === "es" ? "en" : "es"))}
+        >
+          {lang === "es" ? "ES" : "EN"}
+        </button>
+      </div>
+
       <div className="sticky top-0 z-10 -mx-4 mb-8 border-b border-zinc-800 bg-zinc-950/80 px-4 py-3 backdrop-blur">
         <nav className="flex flex-wrap gap-3 text-sm text-zinc-300">
           {[
-            ["Perfil", "perfil"],
-            ["Experiencia", "experiencia"],
-            ["Proyectos", "proyectos"],
-            ["Skills", "skills"],
-            ["Educación", "educacion"],
-            ["Idiomas", "idiomas"],
+            [t.nav.profile, "perfil"],
+            [t.nav.experience, "experiencia"],
+            [t.nav.projects, "proyectos"],
+            [t.nav.skills, "skills"],
+            [t.nav.education, "educacion"],
+            [t.nav.languages, "idiomas"],
           ].map(([label, id]) => (
             <a key={id} className="hover:text-white" href={`#${id}`}>
               {label}
             </a>
           ))}
+
           <span className="ml-auto text-zinc-400 hidden sm:inline">
             {cv.location}
           </span>
@@ -51,7 +80,7 @@ export default function App() {
       </header>
 
       <div className="space-y-10">
-        <Section id="perfil" title="Perfil Profesional">
+        <Section id="perfil" title={t.profileTitle}>
           <Card>
             <ul className="list-disc pl-5 space-y-2 text-zinc-200">
               {cv.summary.map((s) => (
@@ -61,7 +90,7 @@ export default function App() {
           </Card>
         </Section>
 
-        <Section id="experiencia" title="Experiencia Profesional">
+       <Section id="experiencia" title={t.experienceTitle}>
           <div className="space-y-4">
             {cv.experience.map((e) => (
               <Card key={e.company + e.period}>
@@ -82,7 +111,10 @@ export default function App() {
                 {e.clients?.length ? (
                   <div className="mt-4 space-y-3">
                     {e.clients.map((c) => (
-                      <div key={c.name} className="rounded-xl border border-zinc-800 p-4">
+                      <div
+                        key={c.name}
+                        className="rounded-xl border border-zinc-800 p-4"
+                      >
                         <p className="font-medium">{c.name}</p>
                         <ul className="mt-2 list-disc pl-5 space-y-1 text-zinc-200">
                           {c.bullets.map((b) => (
@@ -98,7 +130,7 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="proyectos" title="Proyectos Relevantes">
+        {/* <Section id="proyectos" title="Proyectos Relevantes">
           <div className="grid gap-4 sm:grid-cols-2">
             {cv.projects.map((p) => (
               <Card key={p.name + p.client}>
@@ -115,17 +147,19 @@ export default function App() {
               </Card>
             ))}
           </div>
-        </Section>
-        
-         <SkillsSection />
+        </Section> */}
+        {/* <ProjectsSection /> */}
+        <ProjectsSection cv={cv} lang={lang} />
 
-        <Section id="educacion" title="Educación">
+        <SkillsSection cv={cv} lang={lang} />
+
+        <Section id="educacion" title={t.educationTitle}>
           <Card>
             <p className="text-zinc-200">{cv.education}</p>
           </Card>
         </Section>
 
-        <Section id="idiomas" title="Idiomas">
+       <Section id="idiomas" title={t.languagesTitle}>
           <Card>
             <ul className="list-disc pl-5 space-y-1 text-zinc-200">
               {cv.languages.map((l) => (
@@ -136,7 +170,9 @@ export default function App() {
         </Section>
 
         <footer className="pt-6 border-t border-zinc-800 text-sm text-zinc-400">
-          <p>Hecho con React + Tailwind. Deploy ideal: Vercel / Netlify / GitHub Pages.</p>
+        
+            <p>{t.footer}</p>
+
         </footer>
       </div>
     </Container>

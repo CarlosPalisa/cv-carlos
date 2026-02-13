@@ -11,7 +11,17 @@ export type ProjectItem = {
   client: string;
   year: string;
   bullets: string[];
+  tags?: ProjectTag[];     
+  stack?: string[];        
+  links?: ProjectLink[];   
 };
+export type ProjectLink = {
+  label: "Live" | "GitHub" | "Demo" | "Docs";
+  url: string;
+};
+
+export type ProjectTag = "Full Stack" | "Frontend" | "Backend" | "Other";
+
 
 export const cv = {
   name: "Carlos Palisa",
@@ -100,6 +110,36 @@ export const cv = {
         "Integración de múltiples APIs y mejora del rendimiento general.",
       ],
     },
+    {
+    name: "Church Management System",
+    client: "Proyecto personal",
+    year: "2026",
+    bullets: [
+      "SPA para gestión de miembros, eventos, finanzas y módulos.",
+      "Arquitectura backend con API REST y persistencia en MongoDB.",
+    ],
+    tags: ["Full Stack"],
+    stack: ["React", "Node.js", "Fastify", "MongoDB", "Tailwind"],
+    links: [
+      { label: "GitHub", url: "https://github.com/CarlosPalisa/ChurchSystem" }, // cambia si es otro
+      { label: "Live", url: "https://TU-URL.vercel.app" }, // cuando lo deployes
+    ],
+  },
+  {
+    name: "Clubes / Members",
+    client: "Proyecto personal",
+    year: "2026",
+    bullets: [
+      "Gestión de clubes y socios con filtros, modales y control por roles.",
+      "UI responsive tipo dashboard.",
+    ],
+    tags: ["Frontend"],
+    stack: ["Next.js", "TypeScript", "Tailwind"],
+    links: [
+      { label: "GitHub", url: "https://github.com/CarlosPalisa/CLUB-SaaS" },
+      { label: "Live", url: "https://TU-URL-CLUBES.vercel.app" },
+    ],
+  },
   ] as ProjectItem[],
   skills: {
     backend: ["PHP (Laravel)", "Node.js", "Express.js", "C# (.NET Core)", "ASP.NET Core"],
