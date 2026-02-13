@@ -1,41 +1,48 @@
 import type { Lang } from "./types";
 
-export const LABELS: Record<Lang, {
+export const LABELS: Record<
+  Lang,
+  {
+    // Navbar
+    nav: {
+      profile: string;
+      experience: string;
+      projects: string;
+      skills: string;
+      education: string;
+      languages: string;
+    };
 
- // Navbar
-  nav: {
-    profile: string;
-    experience: string;
-    projects: string;
-    skills: string;
-    education: string;
-    languages: string;
-  };
+    // Section titles
+    profileTitle: string;
+    educationTitle: string;
+    languagesTitle: string;
 
-  // Section titles
-  profileTitle: string;
-  educationTitle: string;
-  languagesTitle: string;
+    // Footer
+    footer: {
+      text: string;
+      github: string;
+      linkedin: string;
+    };
 
-  // Footer
-  footer: string;  
-  // Global
-  skillsTitle: string;
-  projectsTitle: string;
-  experienceTitle: string;
+    // Global
+    skillsTitle: string;
+    projectsTitle: string;
+    experienceTitle: string;
 
-  all: string;
-  searchSkills: string;
-  searchProjects: string;
-  emptySkills: string;
-  emptyProjects: string;
+    all: string;
+    searchSkills: string;
+    searchProjects: string;
+    emptySkills: string;
+    emptyProjects: string;
 
-  // Categories / Tags
-  skillCategories: Record<string, string>;
-  projectTags: Record<string, string>;
-}> = {
+    // Categories / Tags
+    skillCategories: Record<string, string>;
+    projectTags: Record<string, string>;
+  }
+> = {
   es: {
-     nav: {
+    nav: {
       profile: "Perfil",
       experience: "Experiencia",
       projects: "Proyectos",
@@ -46,7 +53,12 @@ export const LABELS: Record<Lang, {
     profileTitle: "Perfil Profesional",
     educationTitle: "Educación",
     languagesTitle: "Idiomas",
-    footer: "Hecho con React + Tailwind. Deploy ideal: Vercel / Netlify / GitHub Pages.",
+    footer: {
+      text: "Hecho con React + Tailwind. Deploy: Vercel. Desarrollado por Carlos Palisa",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+
     skillsTitle: "Habilidades Técnicas",
     projectsTitle: "Proyectos",
     experienceTitle: "Experiencia Profesional",
@@ -75,8 +87,7 @@ export const LABELS: Record<Lang, {
   },
 
   en: {
-
-     nav: {
+    nav: {
       profile: "Profile",
       experience: "Experience",
       projects: "Projects",
@@ -87,7 +98,12 @@ export const LABELS: Record<Lang, {
     profileTitle: "Professional Summary",
     educationTitle: "Education",
     languagesTitle: "Languages",
-    footer: "Built with React + Tailwind. Recommended deploy: Vercel / Netlify / GitHub Pages.",
+    footer: {
+      text: "Built with React + Tailwind. Recommended deploy: Vercel. Developed by Carlos Palisa",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+
     skillsTitle: "Technical Skills",
     projectsTitle: "Projects",
     experienceTitle: "Professional Experience",

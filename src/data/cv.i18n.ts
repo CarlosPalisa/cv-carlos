@@ -158,7 +158,7 @@ export const cvs: Record<Lang, CVData> = {
     },
     education:
       "Analista de Sistemas de Computación – Instituto Superior del Milagro (Salta)",
-    languages: ["Español: Nativo", "Inglés: Intermedio", "Portugués: Intermedio"],
+    languages: ["Español: Nativo", "Inglés: Intermedio(B2)", "Portugués: Intermedio"],
   },
 
   en: {
@@ -293,6 +293,6 @@ export const cvs: Record<Lang, CVData> = {
     },
     education:
       "Systems Analyst – Instituto Superior del Milagro (Salta, Argentina)",
-    languages: ["Spanish: Native", "English: Intermediate", "Portuguese: Intermediate"],
+    languages: ["Spanish: Native", "English: Intermediate(B2)", "Portuguese: Intermediate"],
   },
 };

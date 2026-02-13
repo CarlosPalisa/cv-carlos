@@ -7,6 +7,8 @@ import ProjectsSection from "./components/Projects";
 import { useEffect, useState } from "react";
 import { cvs, type Lang } from "./data/cv.i18n";
 import { LABELS } from "./i18n/labels";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+
 
 
 
@@ -90,7 +92,7 @@ const t = LABELS[lang];
           </Card>
         </Section>
 
-       <Section id="experiencia" title={t.experienceTitle}>
+        <Section id="experiencia" title={t.experienceTitle}>
           <div className="space-y-4">
             {cv.experience.map((e) => (
               <Card key={e.company + e.period}>
@@ -159,7 +161,7 @@ const t = LABELS[lang];
           </Card>
         </Section>
 
-       <Section id="idiomas" title={t.languagesTitle}>
+        <Section id="idiomas" title={t.languagesTitle}>
           <Card>
             <ul className="list-disc pl-5 space-y-1 text-zinc-200">
               {cv.languages.map((l) => (
@@ -170,9 +172,35 @@ const t = LABELS[lang];
         </Section>
 
         <footer className="pt-6 border-t border-zinc-800 text-sm text-zinc-400">
-        
-            <p>{t.footer}</p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            {/* Texto */}
+            <p>{t.footer.text}</p>
 
+            {/* Social links */}
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/CarlosPalisa"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t.footer.github}
+                className="flex items-center gap-2 hover:text-white transition"
+              >
+                <SiGithub className="w-5 h-5" />
+                <span className="hidden sm:inline">{t.footer.github}</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/carlos-palisa/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={t.footer.linkedin}
+                className="flex items-center gap-2 hover:text-white transition"
+              >
+                <SiLinkedin className="w-5 h-5" />
+                <span className="hidden sm:inline">{t.footer.linkedin}</span>
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     </Container>
