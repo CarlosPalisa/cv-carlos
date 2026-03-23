@@ -28,6 +28,14 @@ export default function App() {
   return saved === "en" || saved === "es" ? saved : "es";
 });
   const [photoOpen, setPhotoOpen] = useState(false);
+ 
+const today = new Date()
+const formattedDate = new Intl.DateTimeFormat("es-AR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+}).format(today);
+
 
 
 useEffect(() => {
@@ -66,7 +74,7 @@ const t = LABELS[lang];
           ))}
 
           <span className="ml-auto text-zinc-400 hidden sm:inline">
-            {cv.location}
+            {formattedDate}, {cv.location}
           </span>
         </nav>
       </div>
@@ -140,7 +148,7 @@ const t = LABELS[lang];
             ))}
           </div>
         </Section>
-        
+
         <ProjectsSection cv={cv} lang={lang} />
 
         <SkillsSection cv={cv} lang={lang} />
@@ -196,7 +204,7 @@ const t = LABELS[lang];
       <PhotoModal
         open={photoOpen}
         onClose={() => setPhotoOpen(false)}
-        src="/foto-perfil.jpg"
+        src="/ProfilePhoto.png"
       />
     </Container>
   );

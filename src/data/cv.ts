@@ -30,9 +30,10 @@ export const cv = {
   email: "carlospalisa@gmail.com",
   phone: "+54 387 2200617",
   summary: [
-    "Full Stack Developer con más de 6 años de experiencia desarrollando aplicaciones web escalables y de alto rendimiento.",
-    "Especializado en PHP y Laravel como stack principal, con experiencia en diseño de arquitecturas backend, APIs REST, integraciones y optimización.",
-    "Experiencia complementaria en Node.js, React y .NET, y despliegues en AWS con Docker y CI/CD.",
+    "Full Stack Developer con más de 6 años de experiencia en el desarrollo de soluciones empresariales utilizando PHP (Laravel), Node.js, Angular y React,",
+    "con fuerte orientación al desarrollo frontend y la construcción de interfaces modernas, eficientes y escalables. Especializado en diseño e implementación de APIs RESTful, integración de sistemas, testing automatizado y despliegue en entornos AWS mediante Docker y pipelines CI/CD",
+    "Orientado a la construcción de soluciones robustas, mantenibles y centradas en la experiencia de usuario, aplicando principios SOLID y metodologías ágiles Scrum. Experiencia participando en todo el ciclo de desarrollo, desde el análisis funcional hasta la puesta en producción, con capacidad para liderar iniciativas técnicas y optimizar procesos.",
+    "Actualmente profundizando conocimientos en arquitecturas cloud modernas (serverless) y en el uso de inteligencia artificial, incluyendo AI Agents y modelos de lenguaje (LLMs), para la automatización de procesos y el desarrollo de soluciones innovadoras.",
   ],
   experience: [
     {
