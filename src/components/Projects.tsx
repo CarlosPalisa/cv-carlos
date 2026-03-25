@@ -191,7 +191,7 @@ export default function ProjectsSection({
                   </div>
                 ) : (
                   <p className="mt-4 text-xs text-zinc-500">
-                    (Agregá links en cv.ts: Live / GitHub / Demo / Docs)
+                    {p.message}
                   </p>
                 )}
               </div>

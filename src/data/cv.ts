@@ -13,7 +13,8 @@ export type ProjectItem = {
   bullets: string[];
   tags?: ProjectTag[];     
   stack?: string[];        
-  links?: ProjectLink[];   
+  links?: ProjectLink[];
+  message: string;   
 };
 export type ProjectLink = {
   label: "Live" | "GitHub" | "Demo" | "Docs";
