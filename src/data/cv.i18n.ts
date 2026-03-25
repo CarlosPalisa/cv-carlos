@@ -105,7 +105,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Full Stack")],
         stack: ["PHP", "Node.js", "React", "AWS"],
-        message: "(Proyecto coorportivo no disponible)",
+        message: "(Proyecto coorporativo no disponible)",
       },
       {
         name: "Migración y Optimización de Sistemas",
@@ -117,7 +117,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Backend")],
         stack: ["Laravel", "Node.js", "SQL Server", "MongoDB"],
-        message: "(Proyecto coorportivo no disponible)",
+        message: "(Proyecto coorporativo no disponible)",
       },
       {
         name: "Church Management System",
