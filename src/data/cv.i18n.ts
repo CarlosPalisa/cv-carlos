@@ -105,7 +105,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Full Stack")],
         stack: ["PHP", "Node.js", "React", "AWS"],
-        message:"(Proyecto coorportivo no disponible)",
+        message: "(Proyecto coorportivo no disponible)",
       },
       {
         name: "Migración y Optimización de Sistemas",
@@ -117,7 +117,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Backend")],
         stack: ["Laravel", "Node.js", "SQL Server", "MongoDB"],
-        message:"(Proyecto coorportivo no disponible)"
+        message: "(Proyecto coorportivo no disponible)",
       },
       {
         name: "Church Management System",
@@ -133,7 +133,7 @@ export const cvs: Record<Lang, CVData> = {
           L("GitHub", "https://github.com/CarlosPalisa/ChurchSystem"),
           L("Live", "https://TU-URL.vercel.app"),
         ],
-        message:"",
+        message: "",
       },
       {
         name: "Clubes / Members",
@@ -149,32 +149,55 @@ export const cvs: Record<Lang, CVData> = {
           L("GitHub", "https://github.com/CarlosPalisa/CLUB-SaaS"),
           L("Live", "https://TU-URL-CLUBES.vercel.app"),
         ],
-        message:""
+        message: "",
       },
     ],
     skills: {
-      backend: ["PHP (Laravel)", "Node.js", "Express.js", "C# (.NET Core)", "ASP.NET Core"],
-      frontend: ["React (JS/TS)", "Angular", "HTML5", "CSS3", "JavaScript", "TypeScript"],
+      backend: [
+        "PHP (Laravel)",
+        "Node.js",
+        "Express.js",
+        "C# (.NET Core)",
+        "ASP.NET Core",
+      ],
+      frontend: [
+        "React (JS/TS)",
+        "Angular",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+      ],
       databases: ["MySQL", "MariaDB", "SQL Server", "MongoDB"],
       cloudDevOps: ["AWS (EC2, S3)", "Docker", "Git", "GitLab CI/CD"],
-      architecture: ["Microservicios", "Clean Architecture", "SOLID", "APIs RESTful"],
+      architecture: [
+        "Microservicios",
+        "Clean Architecture",
+        "SOLID",
+        "APIs RESTful",
+      ],
       methodologies: ["Scrum", "Kanban"],
     },
     education:
       "Analista de Sistemas de Computación – Instituto Superior del Milagro (Salta)",
-    languages: ["Español: Nativo", "Inglés: Intermedio(B2)", "Portugués: Intermedio"],
+    languages: [
+      "Español: Nativo",
+      "Inglés: Intermedio(B2)",
+      "Portugués: Intermedio",
+    ],
   },
 
   en: {
     name: "Carlos Palisa",
-    headline: "Senior Full Stack Developer – PHP | Laravel | AWS | React | Node.js",
+    headline:
+      "Senior Full Stack Developer – PHP | Laravel | AWS | React | Node.js",
     location: "Salta, Argentina",
     email: "carlospalisa@gmail.com",
     phone: "+54 387 2200617",
     summary: [
-      "Full Stack Developer with 6+ years of experience building scalable, high-performance web applications.",
-      "Strong background in PHP and Laravel as a main stack, including backend architecture, REST APIs, integrations, and optimization.",
-      "Additional experience with Node.js, React, and .NET, plus AWS deployments using Docker and CI/CD.",
+      "Full Stack Developer with over 6 years of experience building enterprise solutions using PHP (Laravel), Node.js, Angular, and React, with a strong focus on frontend development and the creation of modern, efficient, and scalable user interfaces. Specialized in designing and implementing RESTful APIs, system integrations, automated testing, and cloud deployments on AWS using Docker and CI/CD pipelines.",
+      "Focused on delivering robust, maintainable, and user-centered solutions, applying SOLID principles and Agile Scrum methodologies. Experienced across the full development lifecycle, from functional analysis to production deployment, with the ability to lead technical initiatives and optimize processes.",
+      "Currently expanding expertise in modern cloud architectures (serverless) and artificial intelligence, including AI Agents and Large Language Models (LLMs), to drive process automation and build innovative solutions.",
     ],
     experience: [
       {
@@ -244,7 +267,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Full Stack")],
         stack: ["PHP", "Node.js", "React", "AWS"],
-        message:"(Corporate projects not available for public display)"
+        message: "(Corporate projects not available for public display)",
       },
       {
         name: "Systems Migration & Optimization",
@@ -256,7 +279,7 @@ export const cvs: Record<Lang, CVData> = {
         ],
         tags: [TAG("Backend")],
         stack: ["Laravel", "Node.js", "SQL Server", "MongoDB"],
-        message:"(Corporate projects not available for public display)"
+        message: "(Corporate projects not available for public display)",
       },
       {
         name: "Church Management System",
@@ -272,7 +295,7 @@ export const cvs: Record<Lang, CVData> = {
           L("GitHub", "https://github.com/CarlosPalisa/ChurchSystem"),
           L("Live", "https://TU-URL.vercel.app"),
         ],
-        message:""
+        message: "",
       },
       {
         name: "Clubs / Members",
@@ -288,19 +311,41 @@ export const cvs: Record<Lang, CVData> = {
           L("GitHub", "https://github.com/CarlosPalisa/CLUB-SaaS"),
           L("Live", "https://TU-URL-CLUBES.vercel.app"),
         ],
-        message:""
+        message: "",
       },
     ],
     skills: {
-      backend: ["PHP (Laravel)", "Node.js", "Express.js", "C# (.NET Core)", "ASP.NET Core"],
-      frontend: ["React (JS/TS)", "Angular", "HTML5", "CSS3", "JavaScript", "TypeScript"],
+      backend: [
+        "PHP (Laravel)",
+        "Node.js",
+        "Express.js",
+        "C# (.NET Core)",
+        "ASP.NET Core",
+      ],
+      frontend: [
+        "React (JS/TS)",
+        "Angular",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+      ],
       databases: ["MySQL", "MariaDB", "SQL Server", "MongoDB"],
       cloudDevOps: ["AWS (EC2, S3)", "Docker", "Git", "GitLab CI/CD"],
-      architecture: ["Microservices", "Clean Architecture", "SOLID", "RESTful APIs"],
+      architecture: [
+        "Microservices",
+        "Clean Architecture",
+        "SOLID",
+        "RESTful APIs",
+      ],
       methodologies: ["Scrum", "Kanban"],
     },
     education:
       "Systems Analyst – Instituto Superior del Milagro (Salta, Argentina)",
-    languages: ["Spanish: Native", "English: Intermediate(B2)", "Portuguese: Intermediate"],
+    languages: [
+      "Spanish: Native",
+      "English: Intermediate(B2)",
+      "Portuguese: Intermediate",
+    ],
   },
 };
